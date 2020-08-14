@@ -8,10 +8,18 @@ import Layout from "../components/common/layout/layout"
 import Home from "./Home"
 import sign from "./sign"
 import dashboard from './dashboard'
+import { Provider } from "react-redux"
+
+import { createStore, applyMiddleware } from 'redux';
+
+import ReduxThunk from 'redux-thunk'
+
+import reducers from '../reducers';
+
 
 const IndexPage = () => (
   <BrowserRouter>
-    <Switch>
+    <Switch >
       <Layout>
         <Route exact path="/" component={Home} />
         <Route exact path ="/sign" component={sign}/>

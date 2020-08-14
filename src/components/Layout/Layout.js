@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Switch, Route, withRouter, Redirect } from "react-router";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Hammer from "rc-hammerjs";
 
@@ -17,12 +16,12 @@ import s from "./Layout.module.scss";
 import BreadcrumbHistory from "../BreadcrumbHistory";
 
 // pages
-import Typography from "../../pages/typography";
-import Maps from "../../pages/maps";
-import Notifications from "../../pages/notifications/Notifications";
-import Icons from "../../pages/icons";
-import Tables from "../../pages/tables";
-import Charts from "../../pages/charts";
+import Typography from "../../pages2/typography";
+import Maps from "../../pages2/maps";
+import Notifications from "../../pages2/notifications/Notifications";
+import Icons from "../../pages2/icons";
+import Tables from "../../pages2/tables";
+import Charts from "../../pages2/charts";
 
 class Layout extends React.Component {
   static propTypes = {
@@ -96,40 +95,6 @@ class Layout extends React.Component {
         <div className={s.wrap}>
           <Header />
 
-          <Hammer onSwipe={this.handleSwipe}>
-            <main className={s.content}>
-              <BreadcrumbHistory url={this.props.location.pathname} />
-              <TransitionGroup>
-                <CSSTransition
-                  key={this.props.location.key}
-                  classNames="fade"
-                  timeout={200}
-                >
-                  <Switch>
-                    <Route
-                      path="/app/main"
-                      exact
-                      render={() => <Redirect to="/app/main/dashboard" />}
-                    />
-                    <Route
-                      path="/app/main/dashboard"
-                      exact
-                      component={Dashboard}
-                    />
-                    <Route path={"/app/typography"} component={Typography} />
-                    <Route path={"/app/tables"} component={Tables} />
-                    <Route path={"/app/ui/maps"} component={Maps} />
-                    <Route
-                      path={"/app/ui/notifications"}
-                      component={Notifications}
-                    />
-                    <Route path={"/app/ui/icons"} component={Icons} />
-                    <Route path={"/app/ui/charts"} component={Charts} />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            </main>
-          </Hammer>
         </div>
       </div>
     );
@@ -143,4 +108,4 @@ function mapStateToProps(store) {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(Layout));
+export default connect(mapStateToProps)(Layout);

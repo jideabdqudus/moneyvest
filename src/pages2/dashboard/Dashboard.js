@@ -363,6 +363,7 @@ const splineArea = {
 };
 
 class Dashboard extends React.Component {
+  
   constructor() {
     super();
     this.forceUpdate = this.forceUpdate.bind(this)

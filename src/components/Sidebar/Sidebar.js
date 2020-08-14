@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import { dismissAlert } from "../../actions/alerts";
 import s from "./Sidebar.module.scss";
 import LinksGroup from "./LinksGroup/LinksGroup";
@@ -253,14 +251,14 @@ class Sidebar extends React.Component {
   }
 }
 
-function mapStateToProps(store) {
-  return {
-    sidebarOpened: store.navigation.sidebarOpened,
-    sidebarStatic: store.navigation.sidebarStatic,
-    alertsList: store.alerts.alertsList,
-    activeItem: store.navigation.activeItem,
-    navbarType: store.navigation.navbarType,
-  };
-}
+// function mapStateToProps(store) {
+//   return {
+//     sidebarOpened: store.navigation.sidebarOpened,
+//     sidebarStatic: store.navigation.sidebarStatic,
+//     alertsList: store.alerts.alertsList,
+//     activeItem: store.navigation.activeItem,
+//     navbarType: store.navigation.navbarType,
+//   };
+// }
 
-export default withRouter(connect(mapStateToProps)(Sidebar));
+export default Sidebar;
