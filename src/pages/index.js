@@ -1,23 +1,22 @@
 import React from "react"
 
-import Layout from "../components/common/layout/layout"
-import SEO from "../components/common/layout/seo"
-import Navigation from "../components/common/navigation/navigation"
+import "bootstrap/dist/css/bootstrap.min.css"
 
-import Header from "../components/sections/header"
-import Features from "../components/sections/features"
-import Footer from "../components/sections/footer"
-import GetStarted from "../components/sections/getstarted"
+import { Switch, Route, BrowserRouter } from "react-router-dom"
+
+import Layout from "../components/common/layout/layout"
+import Home from "./Home"
+import sign from "./sign"
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Navigation />
-    <Header />
-    <Features />
-    <GetStarted />
-    <Footer />
-  </Layout>
+  <BrowserRouter>
+    <Switch>
+      <Layout>
+        <Route exact path="/" component={Home} />
+        <Route exact path ="/sign" component={sign}/>
+      </Layout>
+    </Switch>
+  </BrowserRouter>
 )
 
 export default IndexPage
