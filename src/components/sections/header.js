@@ -8,7 +8,7 @@ import { Container } from "../global"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "crowdy" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -27,23 +27,24 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+            <Subtitle>Smart Financing</Subtitle>
             <h1>
-              All your money,
+              The smart way
               <br />
-              one account
+              to get your 
+              <br/>
+              <span style={{color:"#098C8C"}}>money working</span>
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              Moneyvest connets you to mouth-watering opportunities with good returns.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
               <HeaderButton>Early access</HeaderButton>
             </HeaderForm>
             <FormSubtitle>
-              Already have a beta account?{" "}
-              <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
+              No spamming{" "}
+              <span style={{color:"#098C8C"}}>It's a promise</span>
             </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
