@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import styles from './sign.module.css'
 import {Container, FormGroup} from 'reactstrap'
+import cx from 'classnames'
 
 const sign = () => {
     return (
@@ -16,25 +17,19 @@ const sign = () => {
                             <form>
                             <FormGroup>
                                     <label for="user">User</label>
-                                    <input className="au-input au-input--full" id="password" type="email" name="email" placeholder="Email"/>
+                                    <input className={cx(styles.auInput, styles.auInputFull)} id="password" type="email" name="email" placeholder="Email"/>
                                 </FormGroup>
                                 <FormGroup>
                                 <label for="password">Password</label>
-                                    <input className="au-input au-input--full" id="password" type="password" name="password" placeholder="Password"/>
+                                    <input className={cx(styles.auInput, styles.auInputFull)} id="password" type="password" name="password" placeholder="Password"/>
                                 </FormGroup>
-                                    <button className="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
+                                    <button style={{marginBottom:"20px"}} className={cx(styles.auBtn, styles.auBtnBlock, styles.auBtnGreen)} type="submit">sign in</button>
                                 
                             </form>
-                            <div className="register-link">
+                            <div className={styles.registerLink}>
                                 <p>
-                                    User
-                                    <a href="!#">guest</a>
-                                </p>
-                            </div>
-                            <div className="register-link">
-                                <p>
-                                    Password
-                                    <a href="!#">guest</a>
+                                    User & Password: 
+                                    <a href="!#">{" "}guest</a>
                                 </p>
                             </div>
                         </div>

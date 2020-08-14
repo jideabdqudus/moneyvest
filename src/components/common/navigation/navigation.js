@@ -15,6 +15,8 @@ import {
   ActionsContainer,
 } from "./style"
 
+import {Link} from 'react-router-dom'
+
 const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
 
 export default class Navigation extends Component {
@@ -96,7 +98,7 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button onClick={(()=> console.log("working"))}>Sign in</button>
+            <button><Link to="/sign" style={{color:"white"}}>Sign in</Link></button>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>

@@ -295,3 +295,191 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+.auInput {
+    line-height: 43px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    color: #666;
+    padding: 0 17px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.auInputStyle2 {
+    color: #808080;
+    line-height: 43px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    padding: 0 17px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.auInputFull {
+    width: 100%;
+}
+
+.auInputH65 {
+    line-height: 63px;
+    font-size: 16px;
+    color: #808080;
+}
+
+.auInputW300 {
+    min-width: 300px;
+}
+
+.auInputW435 {
+    min-width: 435px;
+}
+
+@media (max-width: 767px) {
+    .auInputW435 {
+        min-width: 230px;
+    }
+}
+
+.auFormIcon {
+    position: relative;
+}
+
+.auFormIcon .auInput {
+    padding-right: 80px;
+}
+
+.auFormIconSm {
+    position: relative;
+}
+
+.auFormIconSm .auInput {
+    padding-right: 43px;
+}
+
+.auInputIcon {
+    position: absolute;
+    top: 1px;
+    right: 12px;
+    width: 63px;
+    height: 63px;
+    line-height: 63px;
+    text-align: center;
+    display: block;
+}
+
+.auInputIcon i {
+    font-size: 30px;
+    color: #808080;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.auInputXl {
+    min-width: 935px;
+}
+
+@media (max-width: 1600px) {
+    .auInputXl {
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .auInputXl {
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .auInputXl {
+        min-width: 150px;
+    }
+}
+
+.auBtnSubmit {
+    position: relative;
+    right: 0;
+    min-width: 65px;
+    line-height: 43px;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #4272d7;
+    margin-left: -3px;
+}
+
+.auBtnSubmit:hover {
+    background: #3868cd;
+}
+
+.auBtnSubmit > i {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.auBtnSubmit2 {
+    height: 43px;
+    width: 43px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+}
+
+.auBtnSubmit2 i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #4c4c4c;
+    font-size: 20px;
+}
+
+
+
+
+.registerLink {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.registerLink > p > a {
+    color: #ff2e44;
+}
