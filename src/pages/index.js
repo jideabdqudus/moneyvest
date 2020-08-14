@@ -15,8 +15,8 @@ const IndexPage = () => (
       <Layout>
         <Route exact path="/" component={Home} />
         <Route exact path ="/sign" component={sign}/>
-        <Route exact path ="/dashboard" component={dashboard}/>
       </Layout>
+      <Route exact path ="/dashboard" component={dashboard}/>
     </Switch>
   </BrowserRouter>
 )
