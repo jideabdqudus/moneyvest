@@ -92,7 +92,7 @@
   
   background: $widget-bg-color;
   border-radius: $widget-border-radius;
-  box-shadow: var(--widget-shadow);
+  box-shadow: 4px 4px 25px rgba(109, 105, 105, 0.15) ;
 
   > header {
     transition: padding .3s linear;
