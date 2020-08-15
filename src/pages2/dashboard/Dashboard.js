@@ -420,7 +420,7 @@ class Dashboard extends React.Component {
             </Widget>
           </Col>
           <Col xl={4}>
-            <Widget
+            <Widget      
               title={<p style={{ fontWeight: 700 }}>Convertion Rate</p>}
               customDropDown
             >

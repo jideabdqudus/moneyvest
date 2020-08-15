@@ -1,10 +1,55 @@
 import React from "react"
 import styled from "styled-components"
 
+import darkExtra from "../../images/dark-extra.svg";
+import pieChart from "../../images/pie-chart.svg";
+import darkDashboardIcon from "../../images/dark-dashboard.svg";
+import smileImg from "../../images/smileImg.svg";
+
 import { Section, Container } from "../global"
 
 const Features = () => (
   <Section id="features">
+  <StyledContainer>
+      <Subtitle>Moneyvest</Subtitle>
+      <SectionTitle>Why us?</SectionTitle>
+      <FeaturesGrid>
+        <FeatureItem>
+          <img
+          src={darkExtra}
+          alt="darkExtra"
+          width={"60px"}
+          height={"60px"}
+        /><FeatureTitle>Easy to use</FeatureTitle>
+          
+        </FeatureItem>
+        <FeatureItem>
+          <img
+          src={pieChart}
+          alt="pieChart"
+          width={"60px"}
+          height={"60px"}
+        /><FeatureTitle>Quick returns</FeatureTitle>
+        </FeatureItem>
+        <FeatureItem>
+          <img
+          src={darkDashboardIcon}
+          alt="darkDashboard"
+          width={"60px"}
+          height={"60px"}
+        /><FeatureTitle>Single dashboard</FeatureTitle>
+        </FeatureItem>
+        <FeatureItem>
+          <img
+          src={smileImg}
+          alt="smileImg"
+          width={"60px"}
+          height={"60px"}
+        /><FeatureTitle>Fastest customer service</FeatureTitle>
+        </FeatureItem>
+      </FeaturesGrid>
+    </StyledContainer>
+    <br/>
     <StyledContainer>
       <Subtitle>Features</Subtitle>
       <SectionTitle>Smart money management</SectionTitle>
