@@ -289,7 +289,7 @@ class Widget extends React.Component {
                 data-toggle="dropdown"
 
               >
-              </DropdownToggle>
+                </DropdownToggle>
               <DropdownMenu className="bg-widget-transparent" right style={{padding: 10}}>
                 <DropdownItem onClick={this.handleReload} title="Reload">
                   Reload &nbsp;&nbsp;

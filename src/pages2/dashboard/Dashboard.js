@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Table } from "reactstrap"
+import { Row, Col, Table, Button } from "reactstrap"
 
 import usersImg from "../../images/usersImg.svg"
 import smileImg from "../../images/smileImg.svg"
@@ -21,6 +21,8 @@ import p2 from "../../images/people/p2.png"
 import p3 from "../../images/people/p3.png"
 import p4 from "../../images/people/p4.png"
 import p5 from "../../images/userAvatar.png"
+
+import money from "../../images/total-sale.svg"
 
 const orderValueOverride = {
   options: {
@@ -403,16 +405,43 @@ class Dashboard extends React.Component {
               <Row style={{ marginBottom: -9, marginTop: -1 }}>
                 <Col sm={12}>
                   <h3 style={{ fontSize: "20px", fontWeight: "normal" }}>
-                    MVWallet-AbdulQudusOlajide/Moneyvest
+                    MVWallet-AbdulQudus/Olajide
                   </h3>
-                  <span style={{marginTop:"5px", fontSize:"10px", letterSpacing:"1px"}}>08092399019 - Providus Bank</span>
-                  <ApexChart
-                    className="sparkline-chart"
-                    height={80}
-                    series={this.state.orderValue.series}
-                    options={this.state.orderValue.options}
-                    type={"bar"}
-                  />
+                  <p
+                    style={{
+                      marginTop: "5px",
+                      fontSize: "10px",
+                      marginBottom: "15px",
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    08092399019 - Providus Bank
+                  </p>
+                  <Row>
+
+                      {" "}
+                      
+                  </Row>
+                  <Row className={`justify-content-between mt-3`} noGutters>
+                  <Col sm={8} className={"d-flex align-items-center"}>
+                  <Button color="info" outline size="sm">
+                  Add Funds +{" "}
+                </Button>
+                  </Col>
+                  <Col
+                    sm={4}
+                    className={"d-flex align-items-center justify-content-end"}
+                  >
+                    
+                    <img
+                        src={money}
+                        alt="money"
+                        width={"60px"}
+                        height={"60px"}
+                        className={"mr-1"}
+                      />
+                  </Col>
+                </Row>
                 </Col>
               </Row>
             </Widget>
