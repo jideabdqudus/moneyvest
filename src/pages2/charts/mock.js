@@ -30,7 +30,7 @@ export const chartData = {
           enabled: false,
         },
         xaxis: {
-          categories: ['John', 'Joe', 'Jake', 'Amber', 'Peter', 'Mary', 'David', 'Lily'],
+          categories: ['Advansio', 'KPMG', 'Dangote', 'Moneyvest', 'Justrite', 'Delloite', 'Cocacola', 'Lilyrose'],
           labels: {
             style: {
               colors: columnColors,

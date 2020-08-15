@@ -223,12 +223,12 @@ class Tables extends React.Component {
             </Widget>
             <Col lg={12} xs={12}>
               <Widget
-                title={<p style={{ fontWeight: 700 }}>Investment Portfolio</p>}
+                title={<p style={{ fontWeight: 700 }}>Top Investors</p>}
                 customDropDown
               >
-                <ApexChart 
+                <ApexChart
                   className="sparkline-chart"
-                  height={350} 
+                  height={350}
                   series={cd.apex.column.series}
                   options={cd.apex.column.options}
                   type={"bar"}
@@ -300,11 +300,7 @@ class Tables extends React.Component {
             </Widget>
             <Col lg={12} xs={12}>
               <Widget
-                title={
-                  <p style={{ fontWeight: 400 }}>
-                   Expense Chart
-                  </p>
-                }
+                title={<p style={{ fontWeight: 400 }}>Expense Chart</p>}
                 customDropDown
               >
                 <ReactEchartsCore
