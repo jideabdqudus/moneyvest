@@ -7,36 +7,48 @@ const Footer = () => (
   <FooterWrapper id="footer">
     <FooterColumnContainer>
       <FooterColumn>
-        <span>Features</span>
+        <span>About</span>
         <ul>
-          <li>Automation</li>
-          <li>Rewards</li>
+          <li>The Company</li>
+        </ul>
+      </FooterColumn>
+      <FooterColumn>
+        <span>Product</span>
+        <ul>
+          <li>Sponsor</li>
+          <li>Sponsorshop</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
         <span>Resources</span>
         <ul>
-          <li>Compare</li>
+          <li>FAQ</li>
           <li>Blog</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Company</span>
+        <span>Legal</span>
         <ul>
-          <li>About Us</li>
-          <li>Careers</li>
-        </ul>
-      </FooterColumn>
-      <FooterColumn>
-        <span>Social</span>
-        <ul>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Sponsorship</li>
+          <li>Terms of Use</li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
     <BrandContainer>
-      <Logo>Finance</Logo>
+      <Logo>
+        Moneyvest {"  "}
+        <span style={{ fontSize: "10px" }}>
+          <a
+            href="https://abdulqudus.com"
+            target="__blank"
+            style={{ color: " #098c8c" }}
+          >
+            {" "}
+            by jideabdqudus{" "}
+          </a>
+        </span>
+      </Logo>
     </BrandContainer>
   </FooterWrapper>
 )
