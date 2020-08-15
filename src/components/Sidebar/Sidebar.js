@@ -25,6 +25,7 @@ import accountIcon from "../../images/account.svg";
 import smileImg from "../../images/smileImg.svg";
 import { Button } from "reactstrap";
 import notify from '../../images/notify.svg'
+import stocks from '../../images/stocks.svg'
 
 class Sidebar extends React.Component {
   static propTypes = {
@@ -148,6 +149,31 @@ class Sidebar extends React.Component {
               <img
                 src={notify}
                 alt="notify"
+                width={"24px"}
+                height={"24px"}
+              />
+            )}
+          </LinksGroup>
+          <LinksGroup
+            onActiveSidebarItemChange={activeItem =>
+              this.props.dispatch(changeActiveSidebarItem(activeItem))
+            }
+            activeItem={this.props.activeItem}
+            header="Stocks"
+            isHeader
+            link="/dashboard/stocks"
+          >
+            {window.location.href.includes("dashboard") ? (
+              <img
+                src={stocks}
+                alt="stocks"
+                width={"24px"}
+                height={"24px"}
+              />
+            ) : (
+              <img
+                src={stocks}
+                alt="stocks"
                 width={"24px"}
                 height={"24px"}
               />
