@@ -45,11 +45,12 @@ const Features = () => (
           alt="smileImg"
           width={"60px"}
           height={"60px"}
-        /><FeatureTitle>Fastest customer service</FeatureTitle>
+        /><FeatureTitle>Customer service</FeatureTitle>
         </FeatureItem>
       </FeaturesGrid>
     </StyledContainer>
-    <br/>
+    <br style={{paddingBottom:"20px", marginBottom:"20px"}}/>
+    <br style={{paddingBottom:"20px", marginBottom:"20px"}}/>
     <StyledContainer>
       <Subtitle>Features</Subtitle>
       <SectionTitle>Smart money management</SectionTitle>
