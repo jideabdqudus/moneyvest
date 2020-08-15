@@ -17,7 +17,7 @@ import {
 
 import {Link} from 'react-router-dom'
 
-const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
+const NAV_ITEMS = ["Features", "", "", ""]
 
 export default class Navigation extends Component {
   state = {

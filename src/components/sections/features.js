@@ -1,56 +1,44 @@
 import React from "react"
 import styled from "styled-components"
 
-import darkExtra from "../../images/dark-extra.svg";
-import pieChart from "../../images/pie-chart.svg";
-import darkDashboardIcon from "../../images/dark-dashboard.svg";
-import smileImg from "../../images/smileImg.svg";
+import darkExtra from "../../images/dark-extra.svg"
+import totalSale from "../../images/total-sale.svg"
+import darkDashboardIcon from "../../images/dark-dashboard.svg"
+import smileImg from "../../images/smileImg.svg"
 
-import { Section, Container } from "../global"
+import { Section, Container } from "../global" 
 
 const Features = () => (
   <Section id="features">
-  <StyledContainer>
+    <StyledContainer>
       <Subtitle>Moneyvest</Subtitle>
       <SectionTitle>Why us?</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <img
-          src={darkExtra}
-          alt="darkExtra"
-          width={"60px"}
-          height={"60px"}
-        /><FeatureTitle>Easy to use</FeatureTitle>
-          
+          <img src={darkExtra} alt="darkExtra" width={"60px"} height={"60px"} />
+          <FeatureTitle>Easy to use</FeatureTitle>
+        </FeatureItem>
+        <FeatureItem>
+          <img src={totalSale} alt="pieChart" width={"60px"} height={"60px"} />
+          <FeatureTitle>Quick returns</FeatureTitle>
         </FeatureItem>
         <FeatureItem>
           <img
-          src={pieChart}
-          alt="pieChart"
-          width={"60px"}
-          height={"60px"}
-        /><FeatureTitle>Quick returns</FeatureTitle>
+            src={darkDashboardIcon}
+            alt="darkDashboard"
+            width={"60px"}
+            height={"60px"}
+          />
+          <FeatureTitle>Single dashboard</FeatureTitle>
         </FeatureItem>
         <FeatureItem>
-          <img
-          src={darkDashboardIcon}
-          alt="darkDashboard"
-          width={"60px"}
-          height={"60px"}
-        /><FeatureTitle>Single dashboard</FeatureTitle>
-        </FeatureItem>
-        <FeatureItem>
-          <img
-          src={smileImg}
-          alt="smileImg"
-          width={"60px"}
-          height={"60px"}
-        /><FeatureTitle>Customer service</FeatureTitle>
+          <img src={smileImg} alt="smileImg" width={"60px"} height={"60px"} />
+          <FeatureTitle>Customer service</FeatureTitle>
         </FeatureItem>
       </FeaturesGrid>
     </StyledContainer>
-    <br style={{paddingBottom:"20px", marginBottom:"20px"}}/>
-    <br style={{paddingBottom:"20px", marginBottom:"20px"}}/>
+    <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />
+    <br style={{ paddingBottom: "20px", marginBottom: "20px" }} />
     <StyledContainer>
       <Subtitle>Features</Subtitle>
       <SectionTitle>Smart money management</SectionTitle>
