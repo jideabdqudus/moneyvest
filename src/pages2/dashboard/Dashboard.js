@@ -417,31 +417,28 @@ class Dashboard extends React.Component {
                   >
                     08092399019 - Providus Bank
                   </p>
-                  <Row>
-
-                      {" "}
-                      
-                  </Row>
+                  <Row> </Row>
                   <Row className={`justify-content-between mt-3`} noGutters>
-                  <Col sm={8} className={"d-flex align-items-center"}>
-                  <Button color="info" outline size="sm">
-                  Add Funds +{" "}
-                </Button>
-                  </Col>
-                  <Col
-                    sm={4}
-                    className={"d-flex align-items-center justify-content-end"}
-                  >
-                    
-                    <img
+                    <Col sm={8} className={"d-flex align-items-center"}>
+                      <Button color="info" outline size="sm">
+                        Add Funds +{" "}
+                      </Button>
+                    </Col>
+                    <Col
+                      sm={4}
+                      className={
+                        "d-flex align-items-center justify-content-end"
+                      }
+                    >
+                      <img
                         src={money}
                         alt="money"
                         width={"60px"}
                         height={"60px"}
                         className={"mr-1"}
                       />
-                  </Col>
-                </Row>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </Widget>
