@@ -23,6 +23,7 @@ import p4 from "../../images/people/p4.png"
 import p5 from "../../images/userAvatar.png"
 
 import money from "../../images/total-sale.svg"
+import stocks from "../../images/stocks.svg"
 
 const orderValueOverride = {
   options: {
@@ -445,104 +446,99 @@ class Dashboard extends React.Component {
           </Col>
           <Col xl={4}>
             <Widget
-              title={<p style={{ fontWeight: 700 }}>Convertion Rate</p>}
+              title={
+                <p style={{ fontWeight: 200, fontSize: 10 }}>Sponsorship Investments</p>
+              }
               customDropDown
             >
               <Row className={`justify-content-between mt-3`} noGutters>
                 <Col sm={8} className={"d-flex align-items-center"}>
-                  <h3 className={"fw-semi-bold mb-0"}>20.7%</h3>
-                </Col>
-                <Col
-                  sm={4}
-                  className={"d-flex align-items-center justify-content-end"}
-                >
-                  <img src={stocksImg} alt="" className={"mr-1"} />
-                  <p className={"text-success mb-0"}>15%</p>
+                  <h3 className={"fw-semi-bold mb-0"}>₦10,200</h3>
                 </Col>
               </Row>
+              <hr />
               <Row style={{ marginBottom: -9, marginTop: -1 }}>
                 <Col sm={12}>
-                  <ApexChart
-                    className="sparkline-chart"
-                    height={80}
-                    series={this.state.convertionRate.series}
-                    options={this.state.convertionRate.options}
-                    type={"bar"}
-                  />
+                  <ul>
+                    <li>Advansio Cooperative</li>
+                    <li>Cashcruz Salon</li>
+                  </ul>
+                  <br/>
+                  <Row className={`justify-content-between mt-4`} noGutters>
+                    <Col sm={8} className={"d-flex align-items-center"}>
+                      <Button color="info" outline size="sm">
+                        Add Funds +{" "}
+                      </Button>
+                    </Col>
+                    <Col
+                      sm={4}
+                      className={
+                        "d-flex align-items-center justify-content-end"
+                      }
+                    >
+                      <img
+                        src={stocks}
+                        alt="money"
+                        width={"60px"}
+                        height={"60px"}
+                        className={"mr-1"}
+                      />
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </Widget>
           </Col>
-          <Col xl={window.innerWidth > 1280 ? 2 : 4} sm={6}>
-            <Widget>
-              <Row
-                className={`${s.row} justify-content-center align-items-center`}
-              >
-                <Col
-                  sm={12}
-                  className={
-                    "d-flex justify-content-center align-items-center mb-2"
-                  }
-                >
-                  <img src={usersImg} alt="" style={{ paddingTop: 30 }} />
-                </Col>
-                <Col
-                  sm={12}
-                  className={"d-flex justify-content-center align-items-center"}
-                >
-                  <h3 className={"fw-semi-bold pt-1 mb-0"}>50873</h3>
-                </Col>
-                <Col
-                  sm={12}
-                  className={"d-flex justify-content-center align-items-center"}
-                >
-                  <h5 className={"fw-thin pt-1 mb-0"}>Visitors</h5>
-                </Col>
-                <Col
-                  sm={12}
-                  className={
-                    "d-flex justify-content-center align-items-center pt-1"
-                  }
-                >
-                  <img src={stocksImg} alt="" className={"mr-1"} />
-                  <p className={"fw-thin text-success mb-0"}>15%</p>
+          <Col xl={4}>
+            <Widget
+              title={
+                <p style={{ fontWeight: 200, fontSize: 10 }}>Pooled Sponsorship</p>
+              }
+              customDropDown
+            >
+              <Row className={`justify-content-between mt-3`} noGutters>
+                <Col sm={8} className={"d-flex align-items-center"}>
+                  <h3 className={"fw-semi-bold mb-0"}>₦0.00</h3>
                 </Col>
               </Row>
-            </Widget>
-          </Col>
-          <Col xl={2} className={`${s.dashboardBlock}`} sm={6}>
-            <Widget>
-              <Row
-                className={`${s.row} justify-content-center align-items-center`}
-              >
-                <Col
-                  sm={12}
-                  className={
-                    "d-flex justify-content-center align-items-center mb-2"
-                  }
-                >
-                  <img src={smileImg} alt="" style={{ paddingTop: 30 }} />
-                </Col>
-                <Col
-                  sm={12}
-                  className={"d-flex justify-content-center align-items-center"}
-                >
-                  <h3 className={"fw-semi-bold pt-1 mb-0"}>6452</h3>
-                </Col>
-                <Col
-                  sm={12}
-                  className={"d-flex justify-content-center align-items-center"}
-                >
-                  <h5 className={"fw-thin pt-1 mb-0"}>Customers</h5>
-                </Col>
-                <Col
-                  sm={12}
-                  className={
-                    "d-flex justify-content-center align-items-center pt-1"
-                  }
-                >
-                  <img src={stocksImg} alt="" className={"mr-1"} />
-                  <p className={"fw-thin text-success mb-0"}>15%</p>
+              <hr />
+              <Row style={{ marginBottom: -9, marginTop: -1 }}>
+                <Col sm={12}>
+                  <h3 style={{ fontSize: "20px", fontWeight: "normal" }}>
+                    4 months
+                  </h3>
+                  <p
+                    style={{
+                      marginTop: "5px",
+                      fontSize: "10px",
+                      marginBottom: "15px",
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    Tenor
+                  </p>
+                  <br/>
+                  <Row className={`justify-content-between mt-2`} noGutters>
+                    <Col sm={8} className={"d-flex align-items-center"}>
+                      <Button color="info" outline size="sm">
+                        Add Funds +{" "}
+                      </Button>
+                    </Col>
+                    <Col
+                      sm={4}
+                      className={
+                        "d-flex align-items-center justify-content-end"
+                      }
+                    >
+                      <img
+                        src={money}
+                        alt="money"
+                        width={"60px"}
+                        height={"60px"}
+                        className={"mr-1"}
+                      />
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </Widget>
