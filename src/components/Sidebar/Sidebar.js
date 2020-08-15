@@ -17,9 +17,13 @@ import darkUI from "../../images/ui-elements-dark.svg";
 import lightTypography from "../../images/Typography.svg";
 import darkTypography from "../../images/Typography-dark.svg";
 import logo from "../../images/logo.svg";
+import totalSale from "../../images/total-sale.svg";
+import caretActive from '../../images/caret-active.svg'
 import settingsIcon from "../../images/settings.svg";
 import logoutIcon from "../../images/logout.svg";
 import accountIcon from "../../images/account.svg";
+import smileImg from "../../images/smileImg.svg";
+import { Button } from "reactstrap";
 
 class Sidebar extends React.Component {
   static propTypes = {
@@ -57,11 +61,21 @@ class Sidebar extends React.Component {
         <div className={`${(!this.props.sidebarOpened && !this.props.sidebarStatic ) ? s.sidebarClose : ''} ${s.sidebarWrapper}`} id={"sidebar-drawer"}>
         <nav className={s.root}>
           <header className={s.logo}>
-            <img src={logo} alt="logo" className={s.logoStyle} />
-            <span>Flatlogic&nbsp;</span> One
+            <span>Moneyvest&nbsp;</span>
           </header>
-          <h5 className={s.navTitle}>APP</h5>
+          <img
+                  src={accountIcon}
+                  alt="lightDashboard"
+                  width={"60px"}
+                  height={"60px"}
+                  style={{margin: "35px 0 0px 32px"}}
+                />
+          <h4 style={{margin: "35px 0 0px 32px"}}>Hello <b>Abdul-Qudus</b></h4>
+          <p style={{margin: "5px 0 0px 32px"}}>jideabdqudus@gmail.com</p>
+          <Button style={{margin: "5px 0 0px 32px", backgroundColor:"#098c8c"}} size="sm">Edit profile </Button>
+          <br/>
           <ul className={s.nav}>
+          
             <LinksGroup
               onActiveSidebarItemChange={activeItem =>
                 this.props.dispatch(changeActiveSidebarItem(activeItem))
@@ -69,7 +83,7 @@ class Sidebar extends React.Component {
               activeItem={this.props.activeItem}
               header="Dashboard"
               isHeader
-              link="/app/main/dashboard"
+              link="/dashboard"
               index="main"
             >
               {window.location.href.includes("dashboard") ? (
@@ -88,100 +102,25 @@ class Sidebar extends React.Component {
                 />
               )}
             </LinksGroup>
-          </ul>
-          <h5 className={s.navTitle}>TEMPLATE</h5>
-          <ul className={s.nav}>
             <LinksGroup
               onActiveSidebarItemChange={activeItem =>
                 this.props.dispatch(changeActiveSidebarItem(activeItem))
               }
               activeItem={this.props.activeItem}
-              header="Typography"
+              header="Transactions"
               isHeader
-              link="/app/typography"
-              index="main"
+              link="/dashboard/transaction"
             >
-              {window.location.href.includes("typography") ? (
+              {window.location.href.includes("dashboard") ? (
                 <img
-                  src={darkTypography}
+                  src={totalSale}
                   alt="lightDashboard"
                   width={"24px"}
                   height={"24px"}
                 />
               ) : (
                 <img
-                  src={lightTypography}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              )}
-            </LinksGroup>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              activeItem={this.props.activeItem}
-              header="Tables"
-              isHeader
-              link="/app/tables"
-              index="main"
-            >
-              {window.location.href.includes("tables") ? (
-                <img
-                  src={darkTables}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              ) : (
-                <img
-                  src={lightTables}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              )}
-            </LinksGroup>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              activeItem={this.props.activeItem}
-              header="UI Elements"
-              isHeader
-              link="/app/ui"
-              index="ui"
-              exact={false}
-              childrenLinks={[
-                {
-                  header: "Notifications",
-                  link: "/app/ui/notifications"
-                },
-                {
-                  header: "Charts",
-                  link: "/app/ui/charts"
-                },
-                {
-                  header: "Icons",
-                  link: "/app/ui/icons"
-                },
-                {
-                  header: "Maps",
-                  link: "/app/ui/maps"
-                }
-              ]}
-            >
-              {window.location.href.includes("ui") ? (
-                <img
-                  src={darkUI}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              ) : (
-                <img
-                  src={lightUI}
+                  src={totalSale}
                   alt="lightDashboard"
                   width={"24px"}
                   height={"24px"}
@@ -192,34 +131,27 @@ class Sidebar extends React.Component {
           <ul className={s.downNav}>
             <hr />
             <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              header="Settings"
-              isHeader
-              index="main"
-            >
+            
+            header="Help & Support"
+            isHeader
+            link="/!"
+          >
+            {window.location.href.includes("dashboard") ? (
               <img
-                src={settingsIcon}
-                alt="lightDashboard"
+                src={smileImg}
+                alt="smileImg"
                 width={"24px"}
                 height={"24px"}
               />
-            </LinksGroup>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              header="Account"
-              isHeader
-            >
+            ) : (
               <img
-                src={accountIcon}
-                alt="lightDashboard"
+                src={smileImg}
+                alt="smileImg"
                 width={"24px"}
                 height={"24px"}
               />
-            </LinksGroup>
+            )}
+          </LinksGroup>
             <LinksGroup
               onActiveSidebarItemChange={activeItem =>
                 this.props.dispatch(changeActiveSidebarItem(activeItem))
