@@ -16,6 +16,8 @@ import { Button } from "reactstrap"
 import notify from "../../images/notify.svg"
 import stocks from "../../images/stocks.svg"
 
+import { Link } from "react-router-dom";
+
 class Sidebar extends React.Component {
   static propTypes = {
     sidebarStatic: PropTypes.bool,
@@ -106,14 +108,11 @@ class Sidebar extends React.Component {
                 />
               )}
             </LinksGroup>
+            <Link to="/transactions" style={{color:"#666", padding: 0, margin: 0}}>
             <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              activeItem={this.props.activeItem}
               header="Transactions"
               isHeader
-              link="/dashboard/transactions"
+              link="/transactions"
             >
               {window.location.href.includes("dashboard") ? (
                 <img
@@ -131,6 +130,7 @@ class Sidebar extends React.Component {
                 />
               )}
             </LinksGroup>
+            </Link>
             <LinksGroup
               onActiveSidebarItemChange={activeItem =>
                 this.props.dispatch(changeActiveSidebarItem(activeItem))
