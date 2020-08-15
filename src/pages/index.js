@@ -2,19 +2,12 @@ import React from "react"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import { Switch, Route, BrowserRouter } from "react-router-dom"
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom"
 
 import Layout from "../components/common/layout/layout"
 import Home from "./Home"
 import sign from "./sign"
 import dashboard from './dashboard'
-import { Provider } from "react-redux"
-
-import { createStore, applyMiddleware } from 'redux';
-
-import ReduxThunk from 'redux-thunk'
-
-import reducers from '../reducers';
 
 
 const IndexPage = () => (
@@ -24,6 +17,7 @@ const IndexPage = () => (
         <Route exact path="/" component={Home} />
         <Route exact path ="/sign" component={sign}/>
       </Layout>
+      <Route path="/app" exact render={() => <Redirect to="/dashboard"/>}/>
       <Route exact path ="/dashboard" component={dashboard}/>
     </Switch>
   </BrowserRouter>

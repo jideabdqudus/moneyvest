@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment } from "react"
 import styles from "./sign.module.css"
 import { Container, Row, Col, FormGroup } from "reactstrap"
 import cx from "classnames"
@@ -6,20 +6,10 @@ import LoginNavigation from "../components/common/navigation/loginNav"
 import { Redirect } from "react-router"
 
 const sign = () => {
-    const [user, setUser] = useState({
-        user:"guest",
-        password:"guest"
-    })
-
-    const onChange = (e) => {
-        setUser({ ...user, [e.target.name]: e.target.value });
-      };
+    
     
       const onSubmit = (e) => {
-        e.preventDefault();
-       if(user=="guest" && password=="guest"){
-           <Redirect to="/dashboard"/>
-       }
+        
       };
 
   return (
@@ -51,7 +41,6 @@ const sign = () => {
                           type="text"
                           name="user"
                           required
-                          onChange={onChange}
                           placeholder="Username"
                         />
                       </FormGroup>
@@ -62,7 +51,6 @@ const sign = () => {
                           id="password"
                           type="password"
                           name="password"
-                          onChange={onChange}
                           placeholder="Password"
                         />
                       </FormGroup>
