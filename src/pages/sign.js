@@ -27,14 +27,14 @@ const sign = () => {
                 <div className={styles.loginContent} style={{ borderRadius: "10px" }}>
                   <Row>
                     <Col sm="12" md={{ size: 6, offset: 3 }}>
-                      <h4>Sign into Moneyvest</h4>
+                      <h4>Sign in into Moneyvest</h4>
                     </Col>
                   </Row>
                   <br />
                   <div className={styles.loginForm}>
                     <form onSubmit={onSubmit}>
                       <FormGroup>
-                        <label for="user">Username</label>
+                        <label htmlFor="user">Username</label>
                         <input
                           className={cx(styles.auInput, styles.auInputFull)}
                           id="user"
@@ -45,7 +45,7 @@ const sign = () => {
                         />
                       </FormGroup>
                       <FormGroup>
-                        <label for="password">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input
                           className={cx(styles.auInput, styles.auInputFull)}
                           id="password"
