@@ -8,6 +8,7 @@ import { createBrowserHistory } from "history"
 import s from "../components/Layout/Layout.module.scss"
 import Hammer from "rc-hammerjs"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
+import {Breadcrumb, Col} from 'reactstrap'
 
 const dashboard = props => {
   const handleSwipe = e => {
@@ -32,7 +33,7 @@ const dashboard = props => {
         <Header />
         <Hammer onSwipe={handleSwipe}>
           <main className={s.content}>
-            <BreadcrumbHistory url={props.location.pathname} />
+            <h1 style={{marginBottom:"20px"}}>Dashboard</h1>
             <TransitionGroup>
               <CSSTransition
                 key={props.location.key}
