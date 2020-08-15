@@ -2,13 +2,12 @@ import React from "react"
 import { Router } from "react-router-dom"
 import Sidebar from "../components/Sidebar"
 import Dashboard from "../pages2/dashboard/Dashboard"
-import BreadcrumbHistory from "../components/BreadcrumbHistory"
 import Header from "../components/Header"
 import { createBrowserHistory } from "history"
 import s from "../components/Layout/Layout.module.scss"
 import Hammer from "rc-hammerjs"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import {Breadcrumb, Col} from 'reactstrap'
+
 
 const dashboard = props => {
   const handleSwipe = e => {

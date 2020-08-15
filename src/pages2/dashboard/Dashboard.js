@@ -1,27 +1,26 @@
-import React from "react";
-import { Row, Col, Table } from "reactstrap";
+import React from "react"
+import { Row, Col, Table } from "reactstrap"
 
-import usersImg from "../../images/usersImg.svg";
-import smileImg from "../../images/smileImg.svg";
-import totalSale from "../../images/total-sale.svg";
-import orders from "../../images/orders.svg";
-import stocksImg from "../../images/stocks.svg";
-import stocksDownImg from "../../images/stocksDown.svg";
+import usersImg from "../../images/usersImg.svg"
+import smileImg from "../../images/smileImg.svg"
+import totalSale from "../../images/total-sale.svg"
+import orders from "../../images/orders.svg"
+import stocksImg from "../../images/stocks.svg"
+import stocksDownImg from "../../images/stocksDown.svg"
 
-import { chartData } from "./chartsMock";
+import { chartData } from "./chartsMock"
 
-import Widget from "../../components/Widget";
+import Widget from "../../components/Widget"
 
-
-import s from "./Dashboard.module.scss";
-import ApexChart from "react-apexcharts";
+import s from "./Dashboard.module.scss"
+import ApexChart from "react-apexcharts"
 
 //people
-import p1 from "../../images/people/p1.png";
-import p2 from "../../images/people/p2.png";
-import p3 from "../../images/people/p3.png";
-import p4 from "../../images/people/p4.png";
-import p5 from "../../images/userAvatar.png";
+import p1 from "../../images/people/p1.png"
+import p2 from "../../images/people/p2.png"
+import p3 from "../../images/people/p3.png"
+import p4 from "../../images/people/p4.png"
+import p5 from "../../images/userAvatar.png"
 
 const orderValueOverride = {
   options: {
@@ -81,7 +80,7 @@ const orderValueOverride = {
       },
     },
   },
-};
+}
 
 const convertionRateOverride = {
   series: [
@@ -146,7 +145,7 @@ const convertionRateOverride = {
       },
     },
   },
-};
+}
 
 const area = {
   series: [
@@ -168,8 +167,8 @@ const area = {
       },
     },
     fill: {
-      type: 'solid',
-      colors: ["rgba(252, 215, 206, .25)"]
+      type: "solid",
+      colors: ["rgba(252, 215, 206, .25)"],
     },
     colors: ["rgba(246, 121, 93)"],
     dataLabels: {
@@ -212,7 +211,7 @@ const area = {
       },
     },
   },
-};
+}
 
 const area2 = {
   series: [
@@ -234,8 +233,8 @@ const area2 = {
       },
     },
     fill: {
-      type: 'solid',
-      colors: ["rgba(255, 230, 179, .25)"]
+      type: "solid",
+      colors: ["rgba(255, 230, 179, .25)"],
     },
     colors: ["rgba(255, 173, 1)"],
     dataLabels: {
@@ -278,7 +277,7 @@ const area2 = {
       },
     },
   },
-};
+}
 
 const splineArea = {
   series: [
@@ -300,8 +299,8 @@ const splineArea = {
       },
     },
     fill: {
-      colors: ["rgba(255, 205, 101, .2)", 'rgba(0,0,0,0)'],
-      type: 'solid'
+      colors: ["rgba(255, 205, 101, .2)", "rgba(0,0,0,0)"],
+      type: "solid",
     },
     colors: ["#FFBF69", "#323232"],
     legend: {
@@ -361,12 +360,11 @@ const splineArea = {
       },
     },
   },
-};
+}
 
 class Dashboard extends React.Component {
-  
   constructor() {
-    super();
+    super()
     this.forceUpdate = this.forceUpdate.bind(this)
   }
   state = {
@@ -375,7 +373,7 @@ class Dashboard extends React.Component {
     area: { ...area },
     area2: { ...area2 },
     splineArea: { ...splineArea },
-  };
+  }
 
   componentDidMount() {
     window.addEventListener("resize", this.forceUpdate.bind(this))
@@ -391,23 +389,23 @@ class Dashboard extends React.Component {
         <Row>
           <Col xl={4}>
             <Widget
-              title={<p style={{ fontWeight: 700 }}>Average Order Value</p>}
+              title={
+                <p style={{ fontWeight: 200, fontSize: 10 }}>Wallet Balance</p>
+              }
               customDropDown
             >
               <Row className={`justify-content-between mt-3`} noGutters>
                 <Col sm={8} className={"d-flex align-items-center"}>
-                  <h3 className={"fw-semi-bold mb-0"}>872 410 $</h3>
-                </Col>
-                <Col
-                  sm={4}
-                  className={"d-flex align-items-center justify-content-end"}
-                >
-                  <img src={stocksImg} alt="" className={"mr-1"} />
-                  <p className={"text-success mb-0"}>40%</p>
+                  <h3 className={"fw-semi-bold mb-0"}>₦13,400</h3>
                 </Col>
               </Row>
+              <hr />
               <Row style={{ marginBottom: -9, marginTop: -1 }}>
                 <Col sm={12}>
+                  <h3 style={{ fontSize: "20px", fontWeight: "normal" }}>
+                    MVWallet-AbdulQudusOlajide/Moneyvest
+                  </h3>
+                  <span style={{marginTop:"5px", fontSize:"10px", letterSpacing:"1px"}}>08092399019 - Providus Bank</span>
                   <ApexChart
                     className="sparkline-chart"
                     height={80}
@@ -420,7 +418,7 @@ class Dashboard extends React.Component {
             </Widget>
           </Col>
           <Col xl={4}>
-            <Widget      
+            <Widget
               title={<p style={{ fontWeight: 700 }}>Convertion Rate</p>}
               customDropDown
             >
@@ -845,8 +843,8 @@ class Dashboard extends React.Component {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default Dashboard;
+export default Dashboard
