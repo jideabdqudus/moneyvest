@@ -61,7 +61,7 @@ class Sidebar extends React.Component {
       >
         <nav className={s.root}>
           <header className={s.logo}>
-            <span>Moneyvest&nbsp;</span>
+            <span><Link to="/" style={{color:"white"}}>Moneyvest&nbsp;</Link></span>
           </header>
           <img
             src={accountIcon}

@@ -9,7 +9,7 @@ import Hammer from "rc-hammerjs"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
 
-const transactions = () => {
+const transactions = (props) => {
 
     const handleSwipe = e => {
         if ("ontouchstart" in window) {
@@ -34,7 +34,7 @@ const transactions = () => {
         <Header />
         <Hammer onSwipe={handleSwipe}>
           <main className={s.content}>
-            <h1 style={{marginBottom:"20px"}}>Dashboard</h1>
+            <h1 style={{marginBottom:"20px"}}>Transactions</h1>
             <TransitionGroup>
               <CSSTransition
                 key={props.location.key}
