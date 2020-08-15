@@ -152,7 +152,7 @@ class Header extends React.Component {
     return (
       <Navbar
         className={`${s.root} d-print-none`}
-        style={{ zIndex: !openUsersList ? 100 : 0, backgroundColor: "#fafafa" }}
+        style={{ zIndex: !openUsersList ? 100 : 0, backgroundColor: "#323232" }}
       >
         <NavItem className={`${s.toggleSidebarNav} d-md-none d-flex mr-2`}>
           <NavLink
