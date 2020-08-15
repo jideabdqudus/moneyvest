@@ -58,7 +58,8 @@
 }
 
 .pageContentBge5 {
-    background: #e5e5e5;
+    background: "#098c8c";
+    overflow-x: hidden !important;
     height: 100vh;
 }
 
