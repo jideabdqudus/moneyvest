@@ -231,39 +231,40 @@ class Tables extends React.Component {
                     <tr key={0}>
                       <td className={"pl-0 fw-thin"}>Kate Claus</td>
                       <td className={"pl-0 fw-thin"}>10 Jan 2020</td>
-                      <td className={"pl-0 fw-normal"}>$8400</td>
+                      <td className={"pl-0 fw-normal"}>₦8400</td>
                       <td className={"pl-0 text-success fw-normal"}>
-                        On Delivery
+                        Received
                       </td>
                     </tr>
                     <tr key={1}>
                       <td className={"pl-0 fw-thin"}>Maria Gordon</td>
                       <td className={"pl-0 fw-thin"}>08 Jan 2020</td>
-                      <td className={"pl-0 fw-normal"}>$8400</td>
+                      <td className={"pl-0 fw-normal"}>₦8400</td>
                       <td className={"pl-0 text-success fw-normal"}>
-                        On Delivery
+                        Received
                       </td>
                     </tr>
                     <tr key={2}>
                       <td className={"pl-0 fw-thin"}>Nick Peru</td>
                       <td className={"pl-0 fw-thin"}>05 Jan 2020</td>
-                      <td className={"pl-0 fw-normal"}>$1300</td>
-                      <td className={"pl-0 text-danger fw-normal"}>Pending</td>
+                      <td className={"pl-0 fw-normal"}>₦1300</td>
+                      <td className={"pl-0 text-danger fw-normal"}>Sent</td>
                     </tr>
                     <tr key={3}>
                       <td className={"pl-0 fw-thin"}>Lian Robinson</td>
                       <td className={"pl-0 fw-thin"}>20 Dec 2019</td>
-                      <td className={"pl-0 fw-normal"}>$880</td>
-                      <td className={"pl-0 text-danger fw-normal"}>Pending</td>
+                      <td className={"pl-0 fw-normal"}>₦880</td>
+                      <td className={"pl-0 text-danger fw-normal"}>Sent</td>
                     </tr>
                     <tr key={4}>
                       <td className={"pl-0 fw-thin"}>Sam Fisher</td>
                       <td className={"pl-0 fw-thin"}>16 Dec 2019</td>
-                      <td className={"pl-0 fw-normal"}>$9400</td>
-                      <td className={"pl-0 text-danger fw-normal"}>Pending</td>
+                      <td className={"pl-0 fw-normal"}>₦9400</td>
+                      <td className={"pl-0 text-danger fw-normal"}>Sent</td>
                     </tr>
                   </tbody>
                 </Table>
+              
               </Row>
             </Widget>
           </Col>
