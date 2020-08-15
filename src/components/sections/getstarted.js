@@ -8,7 +8,7 @@ const GetStarted = () => (
     <GetStartedContainer>
       <GetStartedTitle>Be the first to get the deals</GetStartedTitle>
       <TryItButton>Get early access</TryItButton>
-      <Subtitle>Awesome deals.</Subtitle>
+      <Subtitle>Perfectly made for you.</Subtitle>
     </GetStartedContainer>
   </StyledSection>
 )

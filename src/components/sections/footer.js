@@ -44,8 +44,8 @@ const Footer = () => (
             target="__blank"
             style={{ color: " #098c8c" }}
           >
-            {" "}
-            by jideabdqudus{" "}
+            {"  "}
+            by, jideabdqudus.{" "}
           </a>
         </span>
       </Logo>
