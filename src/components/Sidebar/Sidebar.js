@@ -24,6 +24,7 @@ import logoutIcon from "../../images/logout.svg";
 import accountIcon from "../../images/account.svg";
 import smileImg from "../../images/smileImg.svg";
 import { Button } from "reactstrap";
+import notify from '../../images/notify.svg'
 
 class Sidebar extends React.Component {
   static propTypes = {
@@ -127,6 +128,31 @@ class Sidebar extends React.Component {
                 />
               )}
             </LinksGroup>
+            <LinksGroup
+            onActiveSidebarItemChange={activeItem =>
+              this.props.dispatch(changeActiveSidebarItem(activeItem))
+            }
+            activeItem={this.props.activeItem}
+            header="Notify"
+            isHeader
+            link="/dashboard/notify"
+          >
+            {window.location.href.includes("dashboard") ? (
+              <img
+                src={notify}
+                alt="notify"
+                width={"24px"}
+                height={"24px"}
+              />
+            ) : (
+              <img
+                src={notify}
+                alt="notify"
+                width={"24px"}
+                height={"24px"}
+              />
+            )}
+          </LinksGroup>
           </ul>
           <ul className={s.downNav}>
             <hr />
