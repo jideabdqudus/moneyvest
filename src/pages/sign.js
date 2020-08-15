@@ -5,7 +5,10 @@ import cx from "classnames"
 import LoginNavigation from "../components/common/navigation/loginNav"
 
 const sign = () => {
-    const [user, setUser] = useState(initialState)
+    const [user, setUser] = useState({
+        user:"guest",
+        password:"guest"
+    })
   return (
     <Fragment>
       <LoginNavigation />
@@ -28,13 +31,13 @@ const sign = () => {
                   <div className={styles.loginForm}>
                     <form>
                       <FormGroup>
-                        <label for="user">User</label>
+                        <label for="user">Username</label>
                         <input
                           className={cx(styles.auInput, styles.auInputFull)}
-                          id="password"
-                          type="email"
-                          name="email"
-                          placeholder="Email"
+                          id="user"
+                          type="text"
+                          name="user"
+                          placeholder="Username"
                         />
                       </FormGroup>
                       <FormGroup>
@@ -84,7 +87,7 @@ const sign = () => {
                     </form>
                     <div className={styles.registerLink}>
                       <p>
-                        User & Password:
+                        Username & Password:
                         <a href="!#"> {"  "}guest</a>
                       </p>
                     </div>
