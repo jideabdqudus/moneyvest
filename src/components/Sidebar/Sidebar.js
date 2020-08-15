@@ -16,7 +16,7 @@ import { Button } from "reactstrap"
 import notify from "../../images/notify.svg"
 import stocks from "../../images/stocks.svg"
 
-import { Link } from "react-router-dom";
+import { Link } from "gatsby"
 
 class Sidebar extends React.Component {
   static propTypes = {
@@ -108,29 +108,30 @@ class Sidebar extends React.Component {
                 />
               )}
             </LinksGroup>
-            <Link to="/transactions" style={{color:"#666", padding: 0, margin: 0}}>
-            <LinksGroup
-              header="Transactions"
-              isHeader
-              link="/transactions"
-            >
-              {window.location.href.includes("dashboard") ? (
-                <img
-                  src={totalSale}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              ) : (
-                <img
-                  src={totalSale}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              )}
-            </LinksGroup>
-            </Link>
+            <div className={"ml-4"}>
+              <Link
+                to="/transactions"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                {window.location.href.includes("dashboard") ? (
+                  <img
+                    src={totalSale}
+                    alt="lightDashboard"
+                    width={"24px"}
+                    height={"24px"}
+                  />
+                ) : (
+                  <img
+                    src={totalSale}
+                    alt="lightDashboard"
+                    width={"24px"}
+                    height={"24px"}
+                  />
+                )}
+                <span className={"ml-4 "}>Transactions</span>
+              </Link>
+            </div>
             <LinksGroup
               onActiveSidebarItemChange={activeItem =>
                 this.props.dispatch(changeActiveSidebarItem(activeItem))
