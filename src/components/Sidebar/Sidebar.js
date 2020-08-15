@@ -113,7 +113,7 @@ class Sidebar extends React.Component {
               activeItem={this.props.activeItem}
               header="Transactions"
               isHeader
-              link="/dashboard/transaction"
+              link="/dashboard/transactions"
             >
               {window.location.href.includes("dashboard") ? (
                 <img

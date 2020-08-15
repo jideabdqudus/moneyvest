@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Table, Button } from "reactstrap"
+import { Row, Col, Table, Button, Badge } from "reactstrap"
 
 import usersImg from "../../images/usersImg.svg"
 import smileImg from "../../images/smileImg.svg"
@@ -24,6 +24,11 @@ import p5 from "../../images/userAvatar.png"
 
 import money from "../../images/total-sale.svg"
 import stocks from "../../images/stocks.svg"
+
+import i1 from "../../images/idea1.jpg"
+import i2 from "../../images/idea2.jpg"
+import i3 from '../../images/idea3.png'
+import i4 from '../../images/idea4.jpeg'
 
 const orderValueOverride = {
   options: {
@@ -469,7 +474,7 @@ class Dashboard extends React.Component {
                   <Row className={`justify-content-between mt-4`} noGutters>
                     <Col sm={8} className={"d-flex align-items-center"}>
                       <Button color="info" outline size="sm">
-                        Add Funds +{" "}
+                        View Sponsorships{" "}
                       </Button>
                     </Col>
                     <Col
@@ -521,12 +526,10 @@ class Dashboard extends React.Component {
                   >
                     Tenor
                   </p>
-                  <br />
-                  <Row className={`justify-content-between mt-2`} noGutters>
+                  <br /><br/>
+                  <Row className={`justify-content-between mt-5`} noGutters>
                     <Col sm={8} className={"d-flex align-items-center"}>
-                      <Button color="info" outline size="sm">
-                        Add Funds +{" "}
-                      </Button>
+                      
                     </Col>
                     <Col
                       sm={4}
@@ -534,13 +537,152 @@ class Dashboard extends React.Component {
                         "d-flex align-items-center justify-content-end"
                       }
                     >
-                      <img
-                        src={money}
-                        alt="money"
-                        width={"60px"}
-                        height={"60px"}
-                        className={"mr-1"}
-                      />
+                      {"  "}
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Widget>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm="12">
+            <h3
+              className={"mb-2"}
+              style={{ color: "#666", fontSize: 20, fontWeight: "normal" }}
+            >
+              Investment Opportunities
+            </h3>
+          </Col>
+          <br />
+          <Col sm="12">
+            <Widget
+              title={
+                <p style={{ fontWeight: 200, fontSize: 10 }}>
+                  Top Opportunities
+                </p>
+              }
+              customDropDown
+            >
+              <br />
+              <Row className={"mb-5"}>
+                <Col sm="12">
+                  <Row>
+                    <Col sm="6">
+                      <Row>
+                        <Col sm="3">
+                          <img
+                            src={i1}
+                            alt="Food"
+                            width={"150px"}
+                            style={{borderRadius:"5px"}}
+                            height={"150px"}
+                          />
+                        </Col>
+                        <Col sm="7">
+                          <h4>Food Photography</h4>
+                          <Badge href="#" color="secondary">
+                            20% returns || 10months
+                          </Badge>
+                          <br />
+                          <p style={{ fontSize: "13px" }}>from ₦20,000</p>
+                          <Button
+                            size="sm"
+                            className={"mt-1"}
+                            style={{ backgroundColor: "#098c8c" }}
+                          >
+                            Invest
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Col>
+                    <Col sm="6">
+                      <Row>
+                        <Col sm="3">
+                          <img
+                            src={i2}
+                            alt="bakery"
+                            style={{borderRadius:"5px"}}
+                            width={"150px"}
+                            height={"150px"}
+                          />
+                        </Col>
+                        <Col sm="7">
+                          <h4>Bakery</h4>
+                          <Badge href="#" color="secondary">
+                            11% returns || 7months
+                          </Badge>
+                          <br />
+                          <p style={{ fontSize: "13px" }}>from ₦10,000</p>
+                          <Button
+                            size="sm"
+                            className={"mt-1"}
+                            style={{ backgroundColor: "#098c8c" }}
+                          >
+                            Invest
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row className={"mt-5"}>
+                <Col sm="12">
+                  <Row>
+                    <Col sm="6">
+                      <Row>
+                        <Col sm="3">
+                          <img
+                            src={i3}
+                            alt="sanitary"
+                            width={"150px"}
+                            height={"150px"}
+                          />
+                        </Col>
+                        <Col sm="7">
+                          <h4>Sanitary</h4>
+                          <Badge href="#" color="secondary">
+                            6% returns || 2 months
+                          </Badge>
+                          <br />
+                          <p style={{ fontSize: "13px" }}>from ₦20,000</p>
+                          <Button
+                            size="sm"
+                            className={"mt-1"}
+                            style={{ backgroundColor: "#098c8c" }}
+                          >
+                            Invest
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Col>
+                    <Col sm="6">
+                      <Row>
+                        <Col sm="3">
+                          <img
+                            src={i4}
+                            alt="ginger"
+                            width={"150px"}
+                            height={"150px"}
+                          />
+                        </Col>
+                        <Col sm="7">
+                          <h4>Ginger Sale</h4>
+                          <Badge href="#" color="secondary">
+                            40% returns || 16months
+                          </Badge>
+                          <br />
+                          <p style={{ fontSize: "13px" }}>from ₦20,000</p>
+                          <Button
+                            size="sm"
+                            className={"mt-1"}
+                            style={{ backgroundColor: "#098c8c" }}
+                          >
+                            Invest
+                          </Button>
+                        </Col>
+                      </Row>
                     </Col>
                   </Row>
                 </Col>
