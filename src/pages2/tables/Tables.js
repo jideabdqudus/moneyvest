@@ -22,6 +22,8 @@ import s from "./Tables.modules.scss"
 
 import ApexChart from "react-apexcharts"
 
+import { chartData } from "../charts/mock"
+
 //people
 import p1 from "../../images/people/p1.png"
 import p2 from "../../images/people/p2.png"
@@ -29,11 +31,26 @@ import p3 from "../../images/people/p3.png"
 import p4 from "../../images/people/p4.png"
 import p5 from "../../images/userAvatar.png"
 
+import ReactEchartsCore from "echarts-for-react/lib/core"
+
+import echarts from "echarts/lib/echarts"
+
+import "echarts/lib/chart/line"
+import "echarts/lib/chart/pie"
+import "echarts/lib/chart/themeRiver"
+import "echarts/lib/component/tooltip"
+import "echarts/lib/component/legend"
+
 class Tables extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      cd: chartData,
+      initEchartsOptions: {
+        renderer: "canvas",
+      },
+
       tableStyles: [
         {
           id: 1,
@@ -153,6 +170,7 @@ class Tables extends React.Component {
   }
 
   render() {
+    const { cd, initEchartsOptions } = this.state
     return (
       <div className={s.root}>
         <Row>
@@ -203,6 +221,20 @@ class Tables extends React.Component {
                 <Button>Sign in</Button>
               </Form>
             </Widget>
+            <Col lg={12} xs={12}>
+              <Widget
+                title={<p style={{ fontWeight: 700 }}>Investment Portfolio</p>}
+                customDropDown
+              >
+                <ApexChart 
+                  className="sparkline-chart"
+                  height={350} 
+                  series={cd.apex.column.series}
+                  options={cd.apex.column.options}
+                  type={"bar"}
+                />
+              </Widget>
+            </Col>
           </Col>
           <Col lg={6}>
             <Widget
@@ -264,9 +296,25 @@ class Tables extends React.Component {
                     </tr>
                   </tbody>
                 </Table>
-              
               </Row>
             </Widget>
+            <Col lg={12} xs={12}>
+              <Widget
+                title={
+                  <p style={{ fontWeight: 400 }}>
+                   Expense Chart
+                  </p>
+                }
+                customDropDown
+              >
+                <ReactEchartsCore
+                  echarts={echarts}
+                  option={cd.echarts.donut}
+                  opts={initEchartsOptions}
+                  style={{ height: "190px" }}
+                />
+              </Widget>
+            </Col>
           </Col>
         </Row>
       </div>

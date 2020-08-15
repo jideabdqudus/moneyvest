@@ -208,11 +208,11 @@ export const chartData = {
             }
           },
           data: [
-            {value: 335, name: 'Direct interview'},
-            {value: 310, name: 'Email marketing'},
-            {value: 234, name: 'Alliance advertising'},
-            {value: 135, name: 'Video ad'},
-            {value: 1548, name: 'Search engine'}
+            {value: 335, name: 'Data'},
+            {value: 310, name: 'Transportation'},
+            {value: 234, name: 'Advertisement'},
+            {value: 135, name: 'Withdrawn'},
+            {value: 1548, name: 'Investment'}
           ]
         }
       ]
