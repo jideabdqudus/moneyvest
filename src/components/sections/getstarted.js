@@ -7,8 +7,8 @@ import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
 
 const GetStarted = ()=> {
   const [show, setShow] = useState(false)
-
   const toggle = () => setShow(!show)
+
   return (
     <StyledSection>
       <GetStartedContainer>
