@@ -43,7 +43,7 @@ const Header = props => {
               <span style={{ color: "#098C8C" }}>money working</span>
             </h1>
             <h2>
-              Moneyvest connets you to mouth-watering opportunities with good
+              Moneyvest connects you to mouth-watering opportunities with good
               returns.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
