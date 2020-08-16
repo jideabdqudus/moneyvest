@@ -1,17 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import { Container, Section } from "../global"
 
-const GetStarted = () => (
-  <StyledSection>
-    <GetStartedContainer>
-      <GetStartedTitle>Be the first to get the deals</GetStartedTitle>
-      <TryItButton>Get early access</TryItButton>
-      <Subtitle>Perfectly made for you.</Subtitle>
-    </GetStartedContainer>
-  </StyledSection>
-)
+import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
+
+const GetStarted = ()=> {
+  const [show, setShow] = useState(false)
+
+  const toggle = () => setShow(!show)
+  return (
+    <StyledSection>
+      <GetStartedContainer>
+        <GetStartedTitle>Be the first to get the deals</GetStartedTitle>
+        <TryItButton onClick={toggle}>Get early access</TryItButton>
+        <br/>
+        <Toast isOpen={show}>
+          <ToastHeader toggle={toggle} icon={<Spinner size="sm" />}>
+            Info
+          </ToastHeader>
+          <ToastBody>
+            Oops, that hurts! That part of me is not working right now.
+          </ToastBody>
+        </Toast>
+        <Subtitle>Perfectly made for you.</Subtitle>
+      </GetStartedContainer>
+    </StyledSection>
+  )
+}
 
 export default GetStarted
 
