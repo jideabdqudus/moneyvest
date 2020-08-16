@@ -5,7 +5,7 @@ import { Container, Section } from "../global"
 
 import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
 
-const GetStarted = ()=> {
+const GetStarted = () => {
   const [show, setShow] = useState(false)
   const toggle = () => setShow(!show)
 
@@ -14,7 +14,7 @@ const GetStarted = ()=> {
       <GetStartedContainer>
         <GetStartedTitle>Be the first to get the deals</GetStartedTitle>
         <TryItButton onClick={toggle}>Get early access</TryItButton>
-        <br/>
+        <br />
         <Toast isOpen={show}>
           <ToastHeader toggle={toggle} icon={<Spinner size="sm" />}>
             Info

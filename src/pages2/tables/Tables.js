@@ -18,7 +18,6 @@ import ApexChart from "react-apexcharts"
 
 import { chartData } from "../charts/mock"
 
-
 import ReactEchartsCore from "echarts-for-react/lib/core"
 
 import echarts from "echarts/lib/echarts"

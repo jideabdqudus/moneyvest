@@ -61,7 +61,11 @@ class Sidebar extends React.Component {
       >
         <nav className={s.root}>
           <header className={s.logo}>
-            <span><Link to="/" style={{color:"white"}}>Moneyvest&nbsp;</Link></span>
+            <span>
+              <Link to="/" style={{ color: "white" }}>
+                Moneyvest&nbsp;
+              </Link>
+            </span>
           </header>
           <img
             src={accountIcon}
@@ -82,32 +86,30 @@ class Sidebar extends React.Component {
           </Button>
           <br />
           <ul className={s.nav}>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              activeItem={this.props.activeItem}
-              header="Dashboard"
-              isHeader
-              link="/dashboard"
-              index="main"
-            >
-              {window.location.href.includes("dashboard") ? (
-                <img
-                  src={darkDashboardIcon}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              ) : (
-                <img
-                  src={lightDashboardIcon}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              )}
-            </LinksGroup>
+            <div className={"ml-4"}>
+              <Link
+                to="/dashboard"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                {window.location.href.includes("dashboard") ? (
+                  <img
+                    src={lightDashboardIcon}
+                    alt="lightDashboard"
+                    width={"24px"}
+                    height={"24px"}
+                  />
+                ) : (
+                  <img
+                    src={lightDashboardIcon}
+                    alt="lightDashboard"
+                    width={"24px"}
+                    height={"24px"}
+                  />
+                )}
+                <span className={"ml-4 "}>Dashboard</span>
+              </Link>
+            </div>
             <div className={"ml-4"}>
               <Link
                 to="/transactions"
@@ -139,7 +141,6 @@ class Sidebar extends React.Component {
               activeItem={this.props.activeItem}
               header="Notify"
               isHeader
-              link="/dashboard/notify"
             >
               {window.location.href.includes("dashboard") ? (
                 <img src={notify} alt="notify" width={"24px"} height={"24px"} />
@@ -182,30 +183,30 @@ class Sidebar extends React.Component {
                 />
               )}
             </LinksGroup>
-            <LinksGroup
-              onActiveSidebarItemChange={activeItem =>
-                this.props.dispatch(changeActiveSidebarItem(activeItem))
-              }
-              header="Logout"
-              isHeader
-              onClick={() => this.doLogout()}
-            >
-              {window.location.href.includes("another-page") ? (
-                <img
-                  src={logoutIcon}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              ) : (
-                <img
-                  src={logoutIcon}
-                  alt="lightDashboard"
-                  width={"24px"}
-                  height={"24px"}
-                />
-              )}
-            </LinksGroup>
+            <div className={"ml-4"}>
+              <Link
+                to="/sign"
+                className={"mt-1 mb-1 ml-1"}
+                style={{ color: "#666" }}
+              >
+                {window.location.href.includes("dashboard") ? (
+                  <img
+                    src={logoutIcon}
+                    alt="lightDashboard"
+                    width={"24px"}
+                    height={"24px"}
+                  />
+                ) : (
+                  <img
+                    src={logoutIcon}
+                    alt="lightDashboard"
+                    width={"24px"}
+                    height={"24px"}
+                  />
+                )}
+                <span className={"ml-4 "}>Log out</span>
+              </Link>
+            </div>
           </ul>
         </nav>
       </div>

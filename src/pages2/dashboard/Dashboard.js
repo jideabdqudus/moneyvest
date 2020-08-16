@@ -1,386 +1,22 @@
 import React from "react"
 import { Row, Col, Table, Button, Badge } from "reactstrap"
 
-import usersImg from "../../images/usersImg.svg"
-import smileImg from "../../images/smileImg.svg"
-import totalSale from "../../images/total-sale.svg"
-import orders from "../../images/orders.svg"
-import stocksImg from "../../images/stocks.svg"
-import stocksDownImg from "../../images/stocksDown.svg"
-
-import { chartData } from "./chartsMock"
-
 import Widget from "../../components/Widget"
 
 import s from "./Dashboard.module.scss"
-import ApexChart from "react-apexcharts"
-
-//people
-import p1 from "../../images/people/p1.png"
-import p2 from "../../images/people/p2.png"
-import p3 from "../../images/people/p3.png"
-import p4 from "../../images/people/p4.png"
-import p5 from "../../images/userAvatar.png"
 
 import money from "../../images/total-sale.svg"
 import stocks from "../../images/stocks.svg"
 
 import i1 from "../../images/idea1.jpg"
 import i2 from "../../images/idea2.jpg"
-import i3 from '../../images/idea3.png'
-import i4 from '../../images/idea4.jpeg'
-
-const orderValueOverride = {
-  options: {
-    chart: {
-      height: 350,
-      type: "bar",
-      toolbar: {
-        show: false,
-      },
-    },
-    colors: ["rgba(255, 173, 1, 0.3)"],
-    plotOptions: {
-      bar: {
-        columnWidth: "40%",
-        distributed: true,
-        endingShape: "rounded",
-        startingShape: "rounded",
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      show: false,
-    },
-    xaxis: {
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-      labels: {
-        show: false,
-      },
-    },
-    yaxis: {
-      show: false,
-      labels: {
-        show: false,
-      },
-    },
-    grid: {
-      padding: {
-        left: -9,
-        right: 0,
-      },
-      xaxis: {
-        lines: {
-          show: false,
-        },
-      },
-      yaxis: {
-        lines: {
-          show: false,
-        },
-      },
-    },
-  },
-}
-
-const convertionRateOverride = {
-  series: [
-    {
-      data: [280, 300, 170, 200, 230, 190, 260, 100, 290, 280, 300, 250, 240],
-    },
-  ],
-  options: {
-    chart: {
-      height: 350,
-      type: "bar",
-      toolbar: {
-        show: false,
-      },
-    },
-    colors: ["rgba(246, 121, 93, 0.3)"],
-    plotOptions: {
-      bar: {
-        columnWidth: "40%",
-        distributed: true,
-        endingShape: "rounded",
-        startingShape: "rounded",
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      show: false,
-    },
-    xaxis: {
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-      labels: {
-        show: false,
-      },
-    },
-    yaxis: {
-      show: false,
-      labels: {
-        show: false,
-      },
-    },
-    grid: {
-      padding: {
-        left: -8,
-        right: 0,
-      },
-      xaxis: {
-        lines: {
-          show: false,
-        },
-      },
-      yaxis: {
-        lines: {
-          show: false,
-        },
-      },
-    },
-  },
-}
-
-const area = {
-  series: [
-    {
-      data: [11, 32, 45, 32, 34, 52, 41],
-    },
-  ],
-  options: {
-    stroke: {
-      show: true,
-      curve: "smooth",
-      width: 3,
-    },
-    chart: {
-      height: 350,
-      type: "area",
-      toolbar: {
-        show: false,
-      },
-    },
-    fill: {
-      type: "solid",
-      colors: ["rgba(252, 215, 206, .25)"],
-    },
-    colors: ["rgba(246, 121, 93)"],
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      show: false,
-    },
-    xaxis: {
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-      labels: {
-        show: false,
-      },
-    },
-    yaxis: {
-      show: false,
-      labels: {
-        show: false,
-      },
-    },
-    grid: {
-      padding: {
-        left: 5,
-        right: 0,
-      },
-      xaxis: {
-        lines: {
-          show: false,
-        },
-      },
-      yaxis: {
-        lines: {
-          show: false,
-        },
-      },
-    },
-  },
-}
-
-const area2 = {
-  series: [
-    {
-      data: [31, 40, 28, 51, 42, 109, 100],
-    },
-  ],
-  options: {
-    stroke: {
-      show: true,
-      curve: "smooth",
-      width: 3,
-    },
-    chart: {
-      height: 350,
-      type: "area",
-      toolbar: {
-        show: false,
-      },
-    },
-    fill: {
-      type: "solid",
-      colors: ["rgba(255, 230, 179, .25)"],
-    },
-    colors: ["rgba(255, 173, 1)"],
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      show: false,
-    },
-    xaxis: {
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-      labels: {
-        show: false,
-      },
-    },
-    yaxis: {
-      show: false,
-      labels: {
-        show: false,
-      },
-    },
-    grid: {
-      padding: {
-        left: 5,
-        right: 0,
-      },
-      xaxis: {
-        lines: {
-          show: false,
-        },
-      },
-      yaxis: {
-        lines: {
-          show: false,
-        },
-      },
-    },
-  },
-}
-
-const splineArea = {
-  series: [
-    {
-      name: "Income",
-      data: [31, 40, 28, 51, 42, 109, 100],
-    },
-    {
-      name: "Outcome",
-      data: [11, 32, 45, 32, 34, 52, 41],
-    },
-  ],
-  options: {
-    chart: {
-      height: 350,
-      type: "area",
-      toolbar: {
-        show: false,
-      },
-    },
-    fill: {
-      colors: ["rgba(255, 205, 101, .2)", "rgba(0,0,0,0)"],
-      type: "solid",
-    },
-    colors: ["#FFBF69", "#323232"],
-    legend: {
-      position: "top",
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      curve: "smooth",
-    },
-    yaxis: {
-      labels: {
-        style: {
-          colors: [
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-          ],
-          fontWeight: 300,
-        },
-      },
-    },
-    xaxis: {
-      type: "datetime",
-      categories: [
-        "2018-09-19T00:00:00.000Z",
-        "2018-09-19T01:30:00.000Z",
-        "2018-09-19T02:30:00.000Z",
-        "2018-09-19T03:30:00.000Z",
-        "2018-09-19T04:30:00.000Z",
-        "2018-09-19T05:30:00.000Z",
-        "2018-09-19T06:30:00.000Z",
-      ],
-      labels: {
-        style: {
-          colors: [
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-            "rgba(18, 4, 0, .5)",
-          ],
-          fontWeight: 300,
-        },
-      },
-    },
-    tooltip: {
-      x: {
-        format: "dd/MM/yy HH:mm",
-      },
-    },
-  },
-}
+import i3 from "../../images/idea3.png"
+import i4 from "../../images/idea4.jpeg"
 
 class Dashboard extends React.Component {
   constructor() {
     super()
     this.forceUpdate = this.forceUpdate.bind(this)
-  }
-  state = {
-    orderValue: { ...chartData.apex.column, ...orderValueOverride },
-    convertionRate: { ...chartData.apex.column, ...convertionRateOverride },
-    area: { ...area },
-    area2: { ...area2 },
-    splineArea: { ...splineArea },
   }
 
   componentDidMount() {
@@ -526,11 +162,10 @@ class Dashboard extends React.Component {
                   >
                     Tenor
                   </p>
-                  <br /><br/>
+                  <br />
+                  <br />
                   <Row className={`justify-content-between mt-5`} noGutters>
-                    <Col sm={8} className={"d-flex align-items-center"}>
-                      
-                    </Col>
+                    <Col sm={8} className={"d-flex align-items-center"}></Col>
                     <Col
                       sm={4}
                       className={
@@ -575,7 +210,7 @@ class Dashboard extends React.Component {
                             src={i1}
                             alt="Food"
                             width={"150px"}
-                            style={{borderRadius:"5px"}}
+                            style={{ borderRadius: "5px" }}
                             height={"150px"}
                           />
                         </Col>
@@ -602,7 +237,7 @@ class Dashboard extends React.Component {
                           <img
                             src={i2}
                             alt="bakery"
-                            style={{borderRadius:"5px"}}
+                            style={{ borderRadius: "5px" }}
                             width={"150px"}
                             height={"150px"}
                           />
