@@ -3,32 +3,22 @@ import styles from "./sign.module.css"
 import { Container, Row, Col, FormGroup } from "reactstrap"
 import cx from "classnames"
 import LoginNavigation from "../components/common/navigation/loginNav"
-import { Redirect } from "react-router-dom"
+import { Redirect, Route } from "react-router-dom"
+import { Link } from "gatsby"
 
 const sign = () => {
-    
-    
-      const onSubmit = (e) => {
-        <Route
-        exact
-        path="/sign?user=guest&password=guest"
-        render={() => <Redirect to="/dashboard" />}
-      />
-      };
-
   return (
     <Fragment>
       <LoginNavigation />
-      <div
-        style={{ backgroundColor: "#098c8c" }}
-      >
-        <div
-          className={styles.pageContentBge5}
-        >
+      <div style={{ backgroundColor: "#098c8c" }}>
+        <div className={styles.pageContentBge5}>
           <Container>
-            <div className={styles.container} >
-              <div className={styles.loginWrap} >
-                <div className={styles.loginContent} style={{ borderRadius: "10px" }}>
+            <div className={styles.container}>
+              <div className={styles.loginWrap}>
+                <div
+                  className={styles.loginContent}
+                  style={{ borderRadius: "10px" }}
+                >
                   <Row>
                     <Col sm="12" md={{ size: 6, offset: 3 }}>
                       <h4>Sign in into Moneyvest</h4>
@@ -45,7 +35,6 @@ const sign = () => {
                           type="text"
                           name="user"
                           required
-                          placeholder="Username"
                         />
                       </FormGroup>
                       <FormGroup>
@@ -55,21 +44,21 @@ const sign = () => {
                           id="password"
                           type="password"
                           name="password"
-                          placeholder="Password"
                         />
                       </FormGroup>
-                      <button
-                        style={{ marginBottom: "20px" }}
-                        className={cx(
-                          styles.auBtn,
-                          styles.auBtnBlock,
-                          styles.auBtnGreen
-                        )}
-                        onClick={onSubmit}
-                        type="submit"
-                      >
-                        sign in
-                      </button>
+                      <Link to="/dashboard" style={{display:"block"}}>
+                        <button
+                          style={{ marginBottom: "20px" }}
+                          className={cx(
+                            styles.auBtn,
+                            styles.auBtnBlock,
+                            styles.auBtnGreen
+                          )}
+                          type="submit"
+                        >
+                          sign in
+                        </button>
+                      </Link>
                       <div className={styles.socialLoginContent}>
                         <div className={styles.socialButton}>
                           <button
@@ -97,7 +86,7 @@ const sign = () => {
                     <div className={styles.registerLink}>
                       <p>
                         Username & Password:
-                        <a href="!#"> {"  "}guest</a>
+                        <span style={{ color: "red" }}> {"  "}guest</span>
                       </p>
                     </div>
                   </div>

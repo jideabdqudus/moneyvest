@@ -3,17 +3,11 @@ import {
   Row,
   Col,
   Table,
-  Progress,
   Button,
-  UncontrolledButtonDropdown,
-  DropdownMenu,
-  DropdownToggle,
-  DropdownItem,
   Input,
   Form,
   FormGroup,
   Label,
-  Badge,
 } from "reactstrap"
 import { Sparklines, SparklinesBars } from "react-sparklines"
 
@@ -24,12 +18,6 @@ import ApexChart from "react-apexcharts"
 
 import { chartData } from "../charts/mock"
 
-//people
-import p1 from "../../images/people/p1.png"
-import p2 from "../../images/people/p2.png"
-import p3 from "../../images/people/p3.png"
-import p4 from "../../images/people/p4.png"
-import p5 from "../../images/userAvatar.png"
 
 import ReactEchartsCore from "echarts-for-react/lib/core"
 
@@ -218,7 +206,7 @@ class Tables extends React.Component {
                     </FormGroup>
                   </Col>
                 </Row>
-                <Button>Sign in</Button>
+                <Button color="info">Sign in</Button>
               </Form>
             </Widget>
             <Col lg={12} xs={12}>
