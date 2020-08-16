@@ -3,13 +3,17 @@ import styles from "./sign.module.css"
 import { Container, Row, Col, FormGroup } from "reactstrap"
 import cx from "classnames"
 import LoginNavigation from "../components/common/navigation/loginNav"
-import { Redirect } from "react-router"
+import { Redirect } from "react-router-dom"
 
 const sign = () => {
     
     
       const onSubmit = (e) => {
-        
+        <Route
+        exact
+        path="/sign?user=guest&password=guest"
+        render={() => <Redirect to="/dashboard" />}
+      />
       };
 
   return (
@@ -32,7 +36,7 @@ const sign = () => {
                   </Row>
                   <br />
                   <div className={styles.loginForm}>
-                    <form onSubmit={onSubmit}>
+                    <form>
                       <FormGroup>
                         <label htmlFor="user">Username</label>
                         <input
@@ -61,6 +65,7 @@ const sign = () => {
                           styles.auBtnBlock,
                           styles.auBtnGreen
                         )}
+                        onClick={onSubmit}
                         type="submit"
                       >
                         sign in

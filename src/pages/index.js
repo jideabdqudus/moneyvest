@@ -7,18 +7,21 @@ import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom"
 import Layout from "../components/common/layout/layout"
 import Home from "./Home"
 import sign from "./sign"
-import dashboard from './dashboard'
-
+import dashboard from "./dashboard"
 
 const IndexPage = () => (
   <BrowserRouter>
-    <Switch >
+    <Switch>
       <Layout>
         <Route exact path="/" component={Home} />
-        <Route exact path ="/sign" component={sign}/>
+        <Route exact path="/sign" component={sign} />
       </Layout>
-      <Route path="/sign?user=guest&password=guest" render={() => <Redirect to="/dashboard"/>}/>
-      <Route exact path ="/dashboard" component={dashboard}/>
+      <Route
+        exact
+        path="/sign?user=guest&password=guest"
+        render={() => <Redirect to="/dashboard" />}
+      />
+      <Route exact path="/dashboard" component={dashboard} />
     </Switch>
   </BrowserRouter>
 )
