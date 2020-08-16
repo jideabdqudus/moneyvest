@@ -2,6 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import uuid from 'uuid/v4'
+
 
 import { Container } from "../global"
 
