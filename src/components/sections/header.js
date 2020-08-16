@@ -1,15 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import uuid from 'uuid/v4'
 
+import { Spinner, Toast, ToastBody, ToastHeader } from "reactstrap"
 
 import { Container } from "../global"
 
-const Header = () => {
+const Header = props => {
   const data = useStaticQuery(graphql`
     query {
       file(sourceInstanceName: { eq: "product" }, name: { eq: "crowdy" }) {
@@ -21,6 +19,11 @@ const Header = () => {
       }
     }
   `)
+
+  const { buttonLabel } = props
+  const [show, setShow] = useState(false)
+
+  const toggle = () => setShow(!show)
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -35,20 +38,29 @@ const Header = () => {
             <h1>
               The smart way
               <br />
-              to get your 
-              <br/>
-              <span style={{color:"#098C8C"}}>money working</span>
+              to get your
+              <br />
+              <span style={{ color: "#098C8C" }}>money working</span>
             </h1>
             <h2>
-              Moneyvest connets you to mouth-watering opportunities with good returns.
+              Moneyvest connets you to mouth-watering opportunities with good
+              returns.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
+              <HeaderButton onClick={toggle}>Early access</HeaderButton>
             </HeaderForm>
+            <Toast isOpen={show}>
+              <ToastHeader toggle={toggle} icon={<Spinner size="sm" />}>
+                Info
+              </ToastHeader>
+              <ToastBody>
+                Oops, that hurts! That part of me is not working right now.
+              </ToastBody>
+            </Toast>
             <FormSubtitle>
               No spamming{" "}
-              <span style={{color:"#098C8C"}}>It's a promise</span>
+              <span style={{ color: "#098C8C" }}>It's a promise</span>
             </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
